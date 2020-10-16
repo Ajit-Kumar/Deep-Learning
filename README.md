@@ -52,3 +52,19 @@ block.
 ❖ To Keep the track of the output of each block as I feed these high-resolution feature
 maps to the decoder.
 
+Decoder
+
+❖ The decoder function gets three inputs - input tensor, concatenated tensor and the
+feature channel.
+❖ Then a 2D convolution transpose layer in 1st block of decoder is applied with stride =
+(2, 2) to perform up-sampling at the very first layer. Which means the input image gets
+doubled after the very first block.
+❖ The second block in the decoder concatenates the output of the encoder to decoder.
+❖ Then 3rd and 4th block of decoder have a liner stack of convolution layer followed by
+relu activation and dropout layer of 20%.
+
+
+Final Convolutional layer
+
+❖ Performs a 1x1 convolution along the channels for each individual pixel - outputs a
+Final segmentation mask.
