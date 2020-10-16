@@ -75,3 +75,18 @@ likes:
 ❖ Epochs combination tried from (10-100)
 ❖ Different combination of learning rate
 ❖ Different sets of optimizers used like Adam
+
+Blockers Faced
+
+Few blockers faced during the implementation; I was fortunate enough to handle most of
+them.
+❖ Understanding the problem statement and dataset e.g. the 4th channel
+❖ Figuring out the model to be used, as there are plenty of models and U-Net being
+the obvious choice I wanted to explore more and get the best out to address the
+given problem.
+❖ Channel conversion of masked image (conversion of p mode image to four RGBA
+channels for balanced overlaying/prediction).
+❖ The biggest drawback of deep learning models is that they take a lot of memory
+for processing. As expected even I faced the resource exhaust error and session
+crashed in google Collaboratory due to a large batch size. To handle this, I reduced
+the batch size from 32 to 8. 
