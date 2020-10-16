@@ -7,6 +7,7 @@ Pixel-wise image segmentation is a well-studied problem in medical domain. The t
 label to each pixel (Semantic Segmentation), but do not differentiate instances.
 
 Data Understanding
+
 Dataset details are mentioned below:
 ❖ total of 560 images of size 512x512 in png format.
 ❖ 280 images of normal tissue (colour mode ‘RGBA’)
@@ -16,6 +17,7 @@ Dataset details are mentioned below:
 ❖ It has four classes 
 
 Data Cleaning and preparation
+
 Data cleaning and preparation is an important part, as it can improve the quality of the data
 and in doing so, increases the overall productivity of the models.
 The normal tissue and annotated mask image were separated and kept into two separate
