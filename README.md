@@ -28,3 +28,27 @@ Steps mentioned below were taken on raw images and annotated mask(labels)
 ❖ NumPy array of the images and annotated mask is created for further processing.
 ❖ Normalization is applied on the generated NumPy arrays.
 ❖ The data is splitted into 80:20 ratio in training and testing set, respectively.
+
+Modelling
+
+In this work I have used U-Net as based on my research, I found that it is the best model for
+biomedical Image Segmentation. In this model is implemented using Keras functional API
+as the model has layers that require multiple input/outputs.
+
+Implementation of U-Net
+
+Encoder
+
+❖ Encoder has conv_block function which gets two inputs- input_tensor and
+num_filters(feature channel). The blocks are linear stack of convolutional layers, a
+batch normalisation layer, and then relu activation is applied to map the input and
+output.
+The conv_block function is called in the encoder_block and maxpooling and dropout
+of 20% is applied on each layer.
+❖ Max pooling in the encoder_block reduces spatial resolution of feature map by factor
+of 2.
+❖ Dropout of 20% is introduced at each convolutional layer being called in the encoder
+block.
+❖ To Keep the track of the output of each block as I feed these high-resolution feature
+maps to the decoder.
+
