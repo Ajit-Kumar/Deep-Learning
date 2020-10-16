@@ -68,3 +68,10 @@ Final Convolutional layer
 
 ❖ Performs a 1x1 convolution along the channels for each individual pixel - outputs a
 Final segmentation mask.
+
+The above-mentioned U-Net was trained several numbers of times using different combination
+likes:
+❖ Dropout layer combination tried from (0.2-0.5)
+❖ Epochs combination tried from (10-100)
+❖ Different combination of learning rate
+❖ Different sets of optimizers used like Adam
