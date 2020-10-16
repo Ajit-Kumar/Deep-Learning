@@ -1,4 +1,4 @@
-# Deep-Learning
+# Deep-Learning for image Segmentation
 Semantic Segmentation Using Deep Learning
 
 Pixel-wise image segmentation is a well-studied problem in medical domain. The task of semantic image segmentation is to classify each pixel in the image. 
