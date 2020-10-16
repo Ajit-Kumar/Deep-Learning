@@ -90,3 +90,22 @@ channels for balanced overlaying/prediction).
 for processing. As expected even I faced the resource exhaust error and session
 crashed in google Collaboratory due to a large batch size. To handle this, I reduced
 the batch size from 32 to 8. 
+
+Conclusion
+
+The proposed approach uses U-Net which a popular model for semantic segmentation in
+medical applications. The total images provided are 560 and I took the 20% as validation set.
+This states the model is being trained on 448 images that is not enough for a model to be
+robust and maintain the consistency. Though I have calculated dice coefficient to which is
+used to validate the volumetric segmentation of the medical images, there is a high possibility
+the output may vary as we run the model time and again.
+
+Future Work and steps for improvement
+
+For future and step for improvement we can do the below mentioned things.
+❖ One possible approach is by using transfer learning, by using pretrained model only to
+replace the encoder block of the U-Net architecture.
+❖ The second possible approach is to get more data and use the same approach as
+proposed above. Bringing in more data will increase the robustness of the model.
+❖ Carefully augmenting the data as medical images need high precision and one wrong
+parameter can affect the accuracy of the model drastically
