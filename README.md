@@ -14,3 +14,15 @@ Dataset details are mentioned below:
 ❖ For each normal tissue there is annotation mask.
 ❖ Image annotation was done using semantic segmentation techniques.
 ❖ It has four classes 
+
+Data Cleaning and preparation
+Data cleaning and preparation is an important part, as it can improve the quality of the data
+and in doing so, increases the overall productivity of the models.
+The normal tissue and annotated mask image were separated and kept into two separate
+folders and the file name of the input image and the corresponding segmentation image were
+kept same.
+Steps mentioned below were taken on raw images and annotated mask(labels)
+❖ Annotated image is converted to RGBA format.
+❖ NumPy array of the images and annotated mask is created for further processing.
+❖ Normalization is applied on the generated NumPy arrays.
+❖ The data is splitted into 80:20 ratio in training and testing set, respectively.
